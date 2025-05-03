@@ -1,0 +1,266 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stay Safe with Tahir - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #eef2f3;
+      color: #2c3e50;
+      animation: fadeIn 1s ease-in;
+    }
+    header {
+      background: linear-gradient(to right, #00b09b, #96c93d);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f5f5f5;
+    }
+    .hero {
+      padding: 3rem 2rem;
+      background: url('https://cdn.pixabay.com/photo/2023/06/12/08/56/ai-generated-8056590_960_720.jpg') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      animation: slideDown 1s ease-out;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 2px 2px 4px #000;
+      color: #ff5722;
+    }
+    .hero form input, .hero form button {
+      padding: 0.7rem;
+      margin: 0.3rem;
+      border: none;
+      border-radius: 5px;
+    }
+    .hero form button {
+      background-color: #00b09b;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .hero form button:hover {
+      background-color: #028d78;
+    }
+    .gallery {
+      padding: 2rem;
+      text-align: center;
+    }
+    .gallery h2 {
+      margin-bottom: 1.5rem;
+    }
+    .hotel-images {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .hotel-box {
+      width: 300px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInCard 0.6s ease-in-out;
+    }
+    .hotel-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .hotel-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .hotel-details {
+      padding: 1rem;
+    }
+    .hotel-details h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      color: #00b09b;
+    }
+    .hotel-details p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+    .extras {
+      padding: 2rem;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    .extras h2 {
+      margin-bottom: 1.5rem;
+      animation: fadeIn 0.8s ease-in-out;
+    }
+    .extras-images {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .extras-images img {
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      animation: fadeInCard 0.7s ease-in-out;
+    }
+    .extras-images img:hover {
+      transform: scale(1.05);
+    }
+    #about {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+    #reviews {
+      padding: 2rem;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    .review {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem auto;
+      max-width: 600px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    #contact-info {
+      background-color: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-top: 1px solid #ddd;
+    }
+    #contact-info a {
+      color: #00b09b;
+      text-decoration: none;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInCard {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Stay Safe with Tahir</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Find the best hotel rooms in Pakistan</h2>
+    <form action="hotels.html" method="get">
+      <input type="text" name="city" placeholder="Enter city" required />
+      <input type="date" name="checkin" required />
+      <input type="date" name="checkout" required />
+      <input type="number" name="guests" placeholder="Guests" required />
+      <button type="submit">Search Hotels</button>
+    </form>
+  </section>
+
+  <section class="gallery">
+    <h2>Featured Hotels</h2>
+    <div class="hotel-images">
+      <div class="hotel-box">
+        <img src="https://cdn.pixabay.com/photo/2023/06/12/08/56/ai-generated-8056590_960_720.jpg" alt="Hotel Room 1" />
+        <div class="hotel-details">
+          <h3>Luxury Suite - Karachi</h3>
+          <p>Includes sea view, breakfast buffet, free Wi-Fi, and airport shuttle.</p>
+        </div>
+      </div>
+      <div class="hotel-box">
+        <img src="https://cdn.pixabay.com/photo/2023/06/12/08/54/ai-generated-8056585_960_720.jpg" alt="Hotel Room 2" />
+        <div class="hotel-details">
+          <h3>Executive Room - Lahore</h3>
+          <p>Modern decor, room service, rooftop restaurant access, and 24/7 concierge.</p>
+        </div>
+      </div>
+      <div class="hotel-box">
+        <img src="https://cdn.pixabay.com/photo/2023/06/12/08/55/ai-generated-8056588_960_720.jpg" alt="Hotel Room 3" />
+        <div class="hotel-details">
+          <h3>Deluxe Room - Islamabad</h3>
+          <p>Spacious layout with mountain view, gym access, and smart TV.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="extras">
+    <h2>Our Extra Services</h2>
+    <div class="extras-images">
+      <img src="https://cdn.pixabay.com/photo/2023/06/12/08/58/ai-generated-8056595_960_720.jpg" alt="Catering Service" />
+      <img src="https://cdn.pixabay.com/photo/2023/06/12/08/59/ai-generated-8056598_960_720.jpg" alt="Park View" />
+      <img src="https://cdn.pixabay.com/photo/2023/06/12/09/00/ai-generated-8056600_960_720.jpg" alt="Swimming Pool" />
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Stay Safe with Tahir</h2>
+    <p>We are dedicated to helping travelers discover the finest hotel rooms in Pakistan. With a focus on quality, comfort, and convenience, our service ensures every guest enjoys a premium experience. Whether you're exploring the vibrant streets of Lahore or relaxing by the beaches of Karachi, we’ve got you covered.</p>
+  </section>
+
+  <section id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review">
+      <p>"I had an amazing stay in Islamabad thanks to this platform. The room was spotless, and the service was top-notch!" - Fatima S.</p>
+    </div>
+    <div class="review">
+      <p>"Booking was so easy and the options were exactly what I needed. Will definitely use this again!" - Ahmed K.</p>
+    </div>
+  </section>
+
+  <section id="contact-info">
+    <h2>Contact Us</h2>
+    <p>Phone: <a href="tel:+923187648482">0318 7648482</a></p>
+    <p>Email: <a href="mailto:tahirkanhar043@gmail.com">tahirkanhar043@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Stay Safe with Tahir. All rights reserved.</p>
+  </footer>
+</body>
+</html>
